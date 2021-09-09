@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<div class="container">
+  <div class="row">
+    <div class="well">
+      <h1 style="text-align: center" id="Hfont">ADD PRODUCT</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="col-sm-12">
+      <div class="well">
+        <form action="/product/insert/" method="get" style="text-align: center; font-size: 20px;" id="Hfont">
+          <b>ProductID</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+          <input type="text" id="pid" name="pid" /><br /><br />
+          <b>ProductName</b> &nbsp;&nbsp;&nbsp;&nbsp; :
+          <input type="text" id="pname" name="pname" /><br /><br />
+          <b>Price</b>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          : <input type="text" id="price" name="price" /><br /><br />
+
+          <input class="btn-hover color-8" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+
+</div>
+
+<!-- <div class="cont
+  ainer">
+  <div class="row">
+      <div class="well">
+        <form action="/product/insert/" method="get" style="text-align: center;">
+          ProductID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" id="pid" name="pid" /><br /><br />
+          ProductName &nbsp; : <input type="text" id="pname" name="pname" /><br /><br />
+          Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" id="price" name="price" /><br /><br />
+        
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+  </div>
+</div> -->
+{% endblock %}

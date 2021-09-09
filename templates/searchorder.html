@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<br>
+
+    <div class="well">
+      <h1 style="text-align: center" id="Hfont">SEARCH</h1>
+    </div>
+
+<div class="well" id="Hfont">
+  <form action="/search" method="POST" style="font-size: 20px;">
+    <label for="PROD_CODE">PROD_CODE:</label>
+    <input type="text" id="PROD_CODE" name="PROD_CODE" value="" />
+    <input type="submit" value="Submit" /><br />
+  </form>
+  <br>
+  <p style="font-size: 18px;" id="Hfont">Table Name : {{tb}}</p>
+  <br>
+</div>
+<div class="well" id="Hfont">
+  <div class="table-responsive">
+    <table class="table table-sm table-borderless mb-0">
+      <div class="col-sm-2">
+      <thead class="thead-dark" id="Cfont">
+        <tr style="font-size: 18px;" class="th">
+          <th><b>NO.</b></th>
+          <th><b>PROD_CODE</b></th>
+          <th><b>cust_code</b></th>
+          <th><b>store_code</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          <th scope="row">{{ loop.index }}</th>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="row content"></div>
+  </div>
+</div>
+{% endblock %}

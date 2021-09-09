@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<br>
+
+<div class="well">
+  <h1 style="text-align: center" id="Hfont">PAGE PRODUCT</h1>
+</div>
+
+<div class="well">
+  <p style="font-size: 20px;" id="Hfont">
+  <b>PAGE NUMBER: </b>
+  <input type="text" id="page" name="page" value="" />
+  <button type="button" onclick="getProducTable()">Click Me!</button>
+</p>
+<br>
+  <div id="tabledata" style="font-size: 18px;"></div>
+</div>
+{% endblock %}

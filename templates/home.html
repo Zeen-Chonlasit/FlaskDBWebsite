@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block content %}
+
+<br />
+<div class="well">
+  <h1 style="text-align: center;" id="Hfont">TEAM MEMBER PROFILE</h1>
+</div>
+
+<!-- <img src="{{url_for('static', filename='img/ku-logo.png') }}" ><br> -->
+<!-- <p id="one"> ยินดีต้อนรับเข้าสู่เวบไซต์ </p>
+
+<input type="file" id="uploadfile" name="picUpload" ><br>
+<img id="imagepreview" src="#" alt="your image" /><br>  -->
+
+<!-- </div>  -->
+
+<div class="well">
+    <br>
+  <div class="col-sm-4">
+    <img width="280"
+      class="center"
+      src="{{url_for('static', filename='img/Zeen.jpg') }}"
+    /><br />
+  </div>
+
+  <div class="col-sm-4">
+    <img width="300"
+      class="center"
+      src="{{url_for('static', filename='img/Ham.jpg') }}"
+    /><br />
+  </div>
+  <div class="col-sm-4">
+    <img width="300"
+      class="center"
+      src="{{url_for('static', filename='img/Nook.jpg') }}"
+    /><br />
+  </div>
+
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <dl>
+      <!-- <div class="col-sm-12" style="text-align: center;">
+        <dt>Our Team</dt>
+    </div> -->
+      <div class="col-sm-4" style="text-align: center" id="Thaifont">
+        <dl>
+          <dd style="margin-right: 15px;">ชื่อ ชลสิทธิ์ รัตน์พงศ์ธร</dd>
+          <br>
+          <dd style="margin-right: 3px;">รหัสนิสิต : 6121600217</dd>
+        </dl>
+      </div>
+
+      <div class="col-sm-4" style="text-align: center" id="Thaifont">
+        <dl>
+          <dd style="margin-right: 18px;">ชื่อ วรัท วีรกุลวัฒนา</dd>
+          <br>
+          <dd style="margin-left: 10px;">รหัสนิสิต : 6121608315</dd>
+        </dl>
+      </div>
+      <!-- <div class="vl"></div> -->
+      <div class="col-sm-4" style="text-align: center" id="Thaifont">
+        <dl>
+          <dd>ชื่อ นันท์สินี ศิริมนทกาน</dd>
+          <br>
+          <dd style="margin-left: 13px;">รหัสนิสิต : 6121603976</dd>
+        </dl>
+      </div>
+    </dl>
+  <br /><br><br>
+</div>
+
+{% endblock %}

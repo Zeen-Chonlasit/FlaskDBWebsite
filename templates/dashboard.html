@@ -1,0 +1,70 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<br>
+<div class="container">
+  <div class="row">
+      <div class="well">
+        <h1 style="text-align: center;" id="Hfont">DASHBOARD</h1>
+      </div>
+  </div>
+</div>
+<div class="well" id="Hfont">
+<form action="/dashboard" method="POST">
+    <h4><b>STORE_CODE : </b>
+    <input type="text" id="sid" name="sid" value="STORE00001">
+    <input type="submit" value="Submit"></h4>
+</form>
+</div>
+<div class="row" id="Hfont">
+  <div class="col-sm-3">
+    <div class="well">
+      <h4><b>STORE_CODE</b></h4>
+      <p>{{c1}}</p>
+    </div>
+  </div>
+  <div class="col-sm-3" id="Thaifont">
+    <div class="well">
+      <h4><b>ยอดขาย</b></h4>
+      <p>{{amount}}</p>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="well">
+      <h4><b>SHOP_DATE</b></h4>
+      <p>{{c2}}</p>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="well">
+      <h4><b>Bounce</b></h4>
+      <p>30%</p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h4 style="text-align: center;"><b>Graph1</b></h4><hr>
+      <p><img width="500" class="center" src="data:image/png;base64, {{ plot1 }}"></p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h4 style="text-align: center;"><b>Graph2</b></h4><hr>
+      <p><img width="500" class="center" src="data:image/png;base64, {{ plot2 }}"></p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h4 style="text-align: center;"><b>Graph3</b></h4><hr>
+      <p><img width="500" class="center" src="data:image/png;base64, {{ plot3 }}"></p>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <h4 style="text-align: center;"><b>Graph4</b></h4><hr>
+      <p><img width="500" class="center" src="data:image/png;base64, {{ plot4 }}"></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

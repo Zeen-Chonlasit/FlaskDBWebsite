@@ -1,0 +1,35 @@
+<div class="table-responsive">
+  <table class="table table-sm table-borderless mb-0">
+    <div class="col-sm-2">
+      <thead class="thead-dark" id="Cfont" >
+      <tr class="th" style="font-size: 20px;">
+        <th>NO.</th>
+        <th>product id</th>
+        <th>product name</th>
+        <th>price</th>
+        <th>modify</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody id="Cfont">
+      {% for row in rows %}
+      <tr style="font-size: 14px;">
+        <th scope="row"><b>{{ loop.index }}</b></th>
+        <td><b>{{ row[0] }}</b></td>
+        <td><b>{{ row[1] }}</b></td>
+        <td><b>{{ row[2] }}</b></td>
+        <td>
+          <a
+          style="color: rgb(0, 38, 255);"
+            href="/product/edit/form?pid={{ row[0] }}&pname={{ row[1] }}&price={{ row[2] }}"
+            >edit
+          </a>
+        </td>
+        <td><a  style="color: red;" href="/product/delete?pid={{ row[0] }} ">delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="row content"></div>
+</div>
+</div>
